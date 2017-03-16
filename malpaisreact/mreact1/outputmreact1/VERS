@@ -1,0 +1,50 @@
+      IO       1.0      15 APRIL     1991      OPEN FILES *VERS*, *MESH*, *INCON*, *GENER*, *SAVE*, *LINEQ*, AND *TABLE*
+      TOUGHREACT-ROCMECH V3.31-OMP  31 Oct  2016      MAIN PROGRAM
+      INPUT     2.00    25 Oct       2016      READ ALL DATA PROVIDED THROUGH FILE *INPUT*
+      FLOP     2.0      12 FEB       2012      CALCULATE NUMBER OF SIGNIFICANT DIGITS FOR FLOATING POINT ARITHMETIC
+      RFILE    2.0      24 Mar       2016      INITIALIZE DATA FROM FILES *MESH* OR *MINC*, *GENER*, AND *INCON*
+                                               also initializes permeability modifiers and coordinate arrays
+                                               and optionally reads tables with flowing wellbore pressures
+      PMIN     1.0      26 September 1997      initialize block-by-block permeability modifiers
+      SIN      1.00      1 October   1999      initialize parameters for the solver package, and generate informative printout
+      CYCIT    2.4     24 March  2016      EXECUTIVE ROUTINE FOR MARCHING IN TIME
+
+      EOS      1.1      20 March     2009      *EOS1* ... THERMOPHYSICAL PROPERTIES MODULE FOR WATER
+      SAT      1.0 S    17 SEPTEMBER 1990      STEAM TABLE EQUATION: SATURATION PRESSURE AS FUNCTION OF TEMPERATURE (M. OS.)
+      SUPST    1.0 S     1 February  1991      VAPOR DENSITY AND INTERNAL ENERGY AS FUNCTION OF TEMPERATURE AND PRESSURE (M. OS.)
+      COWAT    1.0 S    17 SEPTEMBER 1990      LIQUID WATER DENSITY AND INT. ENERGY VERSUS TEMPERATURE AND PRESSURE (M. OS.)
+      VISS     1.0      22 JANUARY   1990      VISCOSITY OF VAPOR AS FUNCTION OF TEMPERATURE AND PRESSURE
+      PCAP     1.2      24 March     2016      CAPILLARY PRESSURE AS FUNCTION OF SATURATION
+      RELP     1.11      30 November   2015      LIQUID AND GAS PHASE RELATIVE PERMEABILITIES AS FUNCTIONS OF SATURATION
+                                               for IRP=7, use Corey-krg when RP(4).ne.0, with Sgr = RP(4)
+      VISW     1.0      22 JANUARY   1990      VISCOSITY OF LIQUID WATER AS FUNCTION OF TEMPERATURE AND PRESSURE
+
+      BALLA    1.0      22 JANUARY   1990      PERFORM SUMMARY BALANCES FOR VOLUME, MASS, AND ENERGY
+      Get_TOUGH_HT_Variables 2.4   21 December 2015      Extract hydrological and thermal conditions from flow
+      READSOLU 2.3     30 November  2015      Read input data for solute transport
+      init     2.3      10 March  2015      Read and initialize chemical input data
+      readtherm_hkf 2.2      15 December  2015      Read chemical thermodynamic database
+      echotherm 2.1     03 December  2013      Echo all data read in chemical thermodynamic database
+      aqkin_stoichiometry 2.1 10 March 2015      Obtain stoichiometry coefficients for aqueouskinetic reactions
+      fugacomp   2.1    08 October  2013      Assigns gas fugacity coefficient computation method
+      Gas_fuga_coe 2.1  24 February  2015      Calculate gas fugacity coefficients 
+      GasFugFunction 2.1    08 October 2013      Calculate gas fugacity coefficients 
+      assign    3.0     12 September  2013      Assigns logK values to each reaction
+      hkfpar     2.1    12 September  2013      Assigns data for calculation of Debye-Huckel parameters
+      nrinit   2.3     12 April  2016      Solve initial chemical system by Newton-Raphson iteration
+      cheminit   2.2    1 May  2014      Initializes chemical parameters for Newton-Raphsoniterations
+      dh_hkf81 2.3     5 Apr 2016      Calculate activity coefficient of aqueous species
+      cs_cp    2.2      15 September 2014      Calculate total concentrations and partial derivatives
+      cmq_cp_init 1.1       1 May  2014      Calculate initial saturation indexes of minerals and gases
+      cr_cp_init    1.0      12 April  2016      Calculate initial kinetic mineral mineral saturation indices
+      jacobinit 2.1     12 September  2013      Construct Jacobian matrix for initial chemical system
+      CHDUMP   2.2      2 May 2016      Write chemical speciation data
+      WRITE_ITER  2.1   17 September 2013      Write iteration information
+      TSTEP    1.1     24 MARCH      2016      ADJUST TIME STEPS TO COINCIDE WITH USER-DEFINED TARGET TIMES
+      MULTI    1.5      30 November     2015      ASSEMBLE ALL ACCUMULATION AND FLOW TERMS
+                                               includes capabilities for radiative heat transfer and diffusion in all phases
+                                                  with local equilibrium phase partitioning between gas and liquid
+                                               allows block-by-block permeability modification
+      LINEQ    2.00      4 October   1999      Interface for linear equation solvers T2CG2
+                                               Can call a direct solver or a package of conjugate gradient solvers
+      TSAT     1.0      14 MARCH     1991      SATURATION TEMPERATURE AS FUNCTION OF PRESSURE

@@ -1,0 +1,140 @@
+  TOUGHREACT V3.30-OMP: solute.out
+ 
+  ---> start reading solute.inp
+ '90*90*55 scale Malpais reaction model'                                           
+
+                 ****** Writing solute transport input ******
+
+
+ Options for controlling chemical calculations:
+ *******************************************
+  Using full sequential iterative approach
+    between transport and chemistry (not flow)
+  BiConjugate Gradient Squared Solver (5 = default)
+  Default 1 Iteration: DH and Chemical Solver
+  Flag for gas species transport (0=off/1=on)=  0
+  Print chemical speciation results at each grid block and each time step:  No
+  Calculate porosity and permeability changes and affect fluid flow 
+  CO2 and H2O reaction sources are not considered in flow 
+  Do not consider aqueous density changes due to  reactions
+
+ Constraints for chemistry solver:
+ *********************************
+  Minimum liquid saturation =  1.0000E-04
+  Transport time steps for aq. species limited by  1.00 x  Courant number
+  Maximum stoichiometric ionic strength =  4.0000E+00
+
+ Input and output file names:
+ ***************************
+  Thermo. database: thddem1214r3_hs.dat 
+  Iteration info:   iter.out ! iteration
+  Plot aqueous:     aqueous_conc.tec ! a
+  Plot minerals:    min_volfrac.tec ! mi
+  Plot gas:         gas_volfrac.tec ! ga
+  Plot time series: time.out ! conc. at 
+
+ Time/space weighting factors and diffusion coefficients:
+ *******************************************************
+       WTIME      WUPC    DIFUN     DIFUNG 
+        1.00      1.00  1.000E-09  0.000E+00
+
+ Convergence tolerance data:
+ **************************
+  Maximum iterations for solving transport    =    1
+  Relative tolerance for solving transport    = 1.000E-04
+  Maximum iterations for whole chemical system=  300
+  Relative tolerance for whole chemical system= 1.000E-06
+  (absolute mass action tolerance set at min. 1.E-6)
+  Maximum iterations for solving adsorption   =    0
+  Relative tolerance for solving adsorption   = 0.000E+00
+  Rel. con. change tolerance for steady-state = 0.000E+00
+  Rel. con. change tolerance for steady-state = 0.000E+00
+
+ Printout/output control flags:
+ *****************************
+  Writing frequency in time           =    1
+  Number of nodes to output in time file =   10
+  Number of primary species (total amounts) to output in time/plot files =    0
+  Number of minerals to output time/plot files =    0
+  Number of aqueous species to output time/plot files =    0
+  Number of adsorbed species to output time/plot files =    0
+  Number of exchange species to output time/plot files =    0
+  ICONFLAG(0=mol/kg H2O,1=mol/L,2=g/L,3=mg/L(ppm) )=    0
+  MINFLAG(0=change in mol/m3, 1=change in volume fraction,
+          2=current volume fraction, 3=change in volume%)    1
+  IGASFLAG(0=partial pressure (bars),1=mol fraction) =    1
+
+ Elements for which to output time series:
+ A___2 A__12 A__22 A__32 A__42 B___2 B__12 B__22 B__32 B__42
+
+ Aqueous components for which to output data: 
+ All species in chemical.inp will be written out
+
+ Minerals for which to output data: 
+ All minerals in chemical.inp will be written out
+
+ Individual aqueous species for which to output molalities:
+
+ Surface complexes for which to output molalities:
+
+ Exchanged species for which to output data: 
+
+ Default values for chemical zones:
+ *********************************
+        IZIW IZBW IZMI IZGS IZAD IZEX IZPP IZKD IZBG
+        ---- ---- ---- ---- ---- ---- ---- ---- ----
+        1    0    1    0    0    0    0    0    0
+
+ Data for chemical zones:
+ ***********************
+ELEM NSEQ NADD IZIW IZBW IZMI IZGS IZAD IZEX IZPP IZKD IZBG
+ ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
+A___2    0    0    1    0    1    0    0    0    0    0    0
+A___7    0    0    1    0    1    0    0    0    0    0    0
+A__12    0    0    1    0    1    0    0    0    0    0    0
+A__17    0    0    1    0    1    0    0    0    0    0    0
+A__22    0    0    1    0    1    0    0    0    0    0    0
+A__27    0    0    1    0    1    0    0    0    0    0    0
+A__32    0    0    1    0    1    0    0    0    0    0    0
+A__37    0    0    1    0    1    0    0    0    0    0    0
+A__42    0    0    1    0    1    0    0    0    0    0    0
+B___2    0    0    1    0    1    0    0    0    0    0    0
+B___7    0    0    1    0    1    0    0    0    0    0    0
+B__12    0    0    1    0    1    0    0    0    0    0    0
+B__17    0    0    1    0    1    0    0    0    0    0    0
+B__22    0    0    1    0    1    0    0    0    0    0    0
+B__27    0    0    1    0    1    0    0    0    0    0    0
+B__32    0    0    1    0    1    0    0    0    0    0    0
+B__37    0    0    1    0    1    0    0    0    0    0    0
+B__42    0    0    1    0    1    0    0    0    0    0    0
+C___2    0    0    1    0    1    0    0    0    0    0    0
+C___7    0    0    1    0    1    0    0    0    0    0    0
+C__12    0    0    1    0    1    0    0    0    0    0    0
+C__17    0    0    1    0    1    0    0    0    0    0    0
+C__22    0    0    1    0    1    0    0    0    0    0    0
+C__27    0    0    1    0    1    0    0    0    0    0    0
+C__32    0    0    1    0    1    0    0    0    0    0    0
+C__37    0    0    1    0    1    0    0    0    0    0    0
+C__42    0    0    1    0    1    0    0    0    0    0    0
+D___2    0    0    1    0    1    0    0    0    0    0    0
+D___7    0    0    1    0    1    0    0    0    0    0    0
+D__12    0    0    1    0    1    0    0    0    0    0    0
+D__17    0    0    1    0    1    0    0    0    0    0    0
+D__22    0    0    1    0    1    0    0    0    0    0    0
+D__27    0    0    1    0    1    0    0    0    0    0    0
+D__32    0    0    1    0    1    0    0    0    0    0    0
+D__37    0    0    1    0    1    0    0    0    0    0    0
+D__42    0    0    1    0    1    0    0    0    0    0    0
+E___2    0    0    1    0    1    0    0    0    0    0    0
+E___7    0    0    1    0    1    0    0    0    0    0    0
+E__12    0    0    1    0    1    0    0    0    0    0    0
+E__17    0    0    1    0    1    0    0    0    0    0    0
+E__22    0    0    1    0    1    0    0    0    0    0    0
+E__27    0    0    1    0    1    0    0    0    0    0    0
+E__32    0    0    1    0    1    0    0    0    0    0    0
+E__37    0    0    1    0    1    0    0    0    0    0    0
+E__42    0    0    1    0    1    0    0    0    0    0    0
+ 
+ end
+ 
+  ---> finished reading solute.inp 

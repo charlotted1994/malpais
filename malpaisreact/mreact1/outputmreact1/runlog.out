@@ -1,0 +1,62 @@
+  TOUGHREACT V3.30-OMP: runlog.out
+ 
+  ---> start reading solute.inp
+  ---> finished reading solute.inp 
+
+ --> start reading chemical input data from chemical.inp
+
+
+     Temporarily stop reading chemical.inp to read thermodynamic database....
+    --> Start reading thermodynamic database: thddem1214r3_hs.dat 
+ 
+  --- List of all possible aqueous complexes --- 
+          al(oh)2+            
+          alo2-               
+          aloh+2              
+          also4+              
+          ba(co3)             
+          ba(hco3)+           
+          bacl+               
+          baco3               
+          baoh+               
+          ca(hco3)+           
+          cacl+               
+          cacl2               
+          caco3               
+          caoh+               
+          caso4               
+          co2(aq)             
+          co3-2               
+          h2sio4-2            
+          halo2               
+          hcl                 
+          hsio3-              
+          hso4-               
+          mg(hco3)+           
+          mg4(oh)4+4          
+          mgcl+               
+          mgco3               
+          mgoh+               
+          mgso4               
+          naco3-              
+          nahco3              
+          naoh                
+          naso4-              
+          oh-                 
+ 
+   Mineral       Molar volume (liters/mol)
+      barite                5.21000E-02
+      dolomite              6.43700E-02
+      kaolinite             9.93400E-02
+      quartz(alpha)         2.26900E-02
+  
+    --> Finished reading thermodynamic database
+     ....back to reading chemical.inp
+
+
+  --> Finished reading chemical.inp file
+
+
+  ...running...
+     see output file: iter.out ! iteration for time and time step information
+

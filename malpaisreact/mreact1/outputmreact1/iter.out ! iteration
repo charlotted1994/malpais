@@ -1,0 +1,17 @@
+                     TOUGHREACT V3.30-OMP
+
+          ---- Modelling Progress and Iteration Messages ----
+
+
+ Description of column-headers and variables:
+   ITERFL  = Iterations to solve flow
+   ITERSQ  = Sequential transport-chemistry iterations
+   MAXITCH = Maximum iterations to solve chemistry
+   AVGITCH = Average iterations to solve chemistry
+   DELTA-T = Current time step (days)
+   DT LIMIT = Criterion limiting timestep
+   MAXITCH ID = Grid block: maximum chemical iterations
+
+ TIMESTEP   TIME(yr)   ITERFL ITERSQ MAXITCH AVGITCH DELTA-T(day)  DT LIMIT       MAXITCH ID
+ ----------------------------------------------------------------------------------------------------------
+        0  0.000000E+00     0     0     18   18.000  0.00000E+00      ---           InWat

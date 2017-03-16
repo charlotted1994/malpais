@@ -1,0 +1,256 @@
+  TOUGHREACT V3.30-OMP: chemical.out
+
+ --> start reading chemical input data from chemical.inp
+
+Problem 1: Batch equilibrium reaction                                                               
+--------------------------------------------------------------------------------
+DEFINITION OF THE GEOCHEMICAL SYSTEM
+PRIMARY AQUEOUS SPECIES
+
+   finished reading all primary species
+   total primary species     npri =  11
+     aqueous primary species npaq =  11
+     surface primary species npads=   0
+
+AQUEOUS KINETICS
+   finished reading aqueous kinetics
+   ntrx =   0
+
+AQUEOUS COMPLEXES
+   finished reading secondary species
+   naqx =   0
+
+ AQUEOUS COMPLEXES will be automatically selected from the thermodynamic database
+
+MINERALS
+quartz(alpha)         0  0  0  0
+     0.000     0.000     0.000
+dolomite              0  0  0  0
+     0.000     0.000     0.000
+kaolinite             0  0  0  0
+     0.000     0.000     0.000
+barite                0  0  0  0
+     0.000     0.000     0.000
+   finished reading minerals
+    nmin  =   4
+    nmequ =   4
+    nmkin =   0
+    nsalt =   0
+
+    Salt Minerals
+
+  The following minerals form ideal solid solutions:
+   None
+ 
+GASES
+ co2(g)                                   1
+   finished reading gases
+    ngas  =   1
+
+SURFACE COMPLEXES
+   finished reading surface complexes
+    nads  =   0
+
+SPECIES WITH KD AND DECAY
+Species          Decay const.(1/s)    Th. decay a      Th. decay b
+   finished reading kd/decay species
+    nkdd  =   0
+
+
+     Temporarily stop reading chemical.inp to read thermodynamic database....
+    --> Start reading thermodynamic database: thddem1214r3_hs.dat 
+    --> Finished reading thermodynamic database
+     ....back to reading chemical.inp
+ 
+EXCHANGEABLE CATIONS
+   finished reading exchanged species
+    nexc  =   0
+
+
+ Finished reading upper part of chemical.inp
+ SUMMARY OF THERMODYNAMIC DATA FOR THE CHEMICAL SYSTEM
+
+   Components     a0    charge
+  h2o            0.000    0.0
+  h+             3.080    1.0
+  na+            1.910    1.0
+  cl-            1.810   -1.0
+  hco3-          2.100   -1.0
+  ca+2           2.870    2.0
+  so4-2          3.150   -2.0
+  mg+2           2.540    2.0
+  ba+2           3.220    2.0
+  al+3           3.330    3.0
+  h4sio4         0.000    0.0
+
+
+ Log K interpolation coefficients as a function of temperature (K) (a,b,c,d,e)
+ valid temperature range (deg.C.):   0.0 to 300.0
+                        a*ln(TK)       b          c*TK     d*(TK)**-1  e*(TK)**-2
+ al(oh)2+              4.7439E+01 -3.0498E+02 -5.4475E-02  2.1579E+04 -9.6404E+05
+ alo2-                -3.7794E+01  2.3505E+02  3.4060E-02 -5.3716E+03  9.7939E+05
+ aloh+2                2.4272E+01 -1.5533E+02 -2.9426E-02  1.1126E+04 -5.8273E+05
+ also4+                3.9950E+02 -2.5561E+03 -3.9156E-01  1.4936E+05 -9.5505E+06
+ ba(co3)               1.4263E+02 -8.9830E+02 -1.4048E-01  4.8926E+04 -2.5677E+06
+ ba(hco3)+             1.5785E+02 -1.0063E+03 -1.5825E-01  5.7213E+04 -3.4512E+06
+ bacl+                 1.3848E+02 -8.7768E+02 -1.4190E-01  4.9032E+04 -2.9326E+06
+ baco3                 1.4294E+02 -9.0032E+02 -1.4080E-01  4.9056E+04 -2.5773E+06
+ baoh+                 2.8844E+01 -1.8194E+02 -2.7574E-02  1.2716E+04 -2.9576E+05
+ ca(hco3)+             1.4826E+02 -9.3818E+02 -1.5460E-01  5.2557E+04 -3.3627E+06
+ cacl+                 1.3420E+02 -8.5009E+02 -1.3805E-01  4.7556E+04 -2.8972E+06
+ cacl2                 2.6819E+02 -1.6969E+03 -2.7268E-01  9.4122E+04 -5.7679E+06
+ caco3                 1.4728E+02 -9.2715E+02 -1.4590E-01  5.0165E+04 -2.6331E+06
+ caoh+                 2.5284E+01 -1.5945E+02 -2.5004E-02  1.1895E+04 -3.7918E+05
+ caso4                 2.9147E+02 -1.8547E+03 -2.8259E-01  1.0254E+05 -6.0404E+06
+ co2(aq)               1.1805E+02 -7.5336E+02 -1.2331E-01  4.2533E+04 -2.7983E+06
+ co3-2                -1.3005E+02  8.3279E+02  1.3220E-01 -4.5851E+04  2.9210E+06
+ h2sio4-2              6.1884E+01 -3.8937E+02 -4.3526E-02  2.5040E+04 -9.7415E+05
+ halo2                 4.8730E+01 -3.1306E+02 -5.6171E-02  2.3811E+04 -1.0027E+06
+ hcl                   8.5908E+01 -5.3560E+02 -9.8107E-02  2.9116E+04 -1.9163E+06
+ hsio3-               -1.0471E+02  6.6794E+02  1.0818E-01 -3.5858E+04  2.3521E+06
+ hso4-                 1.3785E+02 -8.8289E+02 -1.3788E-01  5.1456E+04 -3.1964E+06
+ mg(hco3)+             1.4711E+02 -9.3825E+02 -1.4594E-01  5.4027E+04 -3.4357E+06
+ mg4(oh)4+4            2.4677E+02 -1.5676E+03 -2.2749E-01  9.5216E+04 -4.4566E+06
+ mgcl+                 1.4218E+02 -9.0298E+02 -1.4266E-01  5.0922E+04 -3.1753E+06
+ mgco3                 1.5792E+02 -9.9480E+02 -1.5433E-01  5.3882E+04 -2.8732E+06
+ mgoh+                 3.7027E+01 -2.3725E+02 -3.4087E-02  1.7410E+04 -9.1289E+05
+ mgso4                 2.8719E+02 -1.8236E+03 -2.8328E-01  9.9972E+04 -5.8448E+06
+ naco3-                3.1307E+01 -2.0376E+02 -2.5196E-02  1.5201E+04 -8.0198E+05
+ nahco3                1.3127E+02 -8.3357E+02 -1.2262E-01  4.5370E+04 -2.6418E+06
+ naoh                  9.7691E+01 -6.1705E+02 -9.1828E-02  3.7412E+04 -2.0355E+06
+ naso4-                1.5772E+02 -1.0057E+03 -1.5328E-01  5.7268E+04 -3.5803E+06
+ oh-                  -1.1922E+02  7.6099E+02  1.2018E-01 -3.9792E+04  2.6597E+06
+ quartz(alpha)         3.5607E+00 -2.1948E+01 -3.8265E-03 -1.7532E+02 -3.1163E+04
+ dolomite              3.0406E+02 -1.9308E+03 -3.0692E-01  1.0816E+05 -6.1658E+06
+ kaolinite             1.6252E+02 -1.0416E+03 -1.6963E-01  6.0746E+04 -2.7588E+06
+ barite                2.6979E+02 -1.7154E+03 -2.7309E-01  9.4058E+04 -5.8527E+06
+ co2(g)                9.8336E+00 -5.9023E+01 -2.6998E-02  9.5032E+02  0.0000E+00
+
+ dV interpolation coefficients as a function of temperature (K) (a,b,c,d,e) for log(K) pressure dependency 
+ valid temperature range (deg.C.):   0.0 to 300.0
+                        a              b*TK       c*TK**2     d*(TK)**-1  e*(TK)**-2
+ co2(g)                9.8336E+00 -5.9023E+01 -2.6998E-02  9.5032E+02  0.0000E+00
+
+ Derived Species Reactions
+  species        a0   charge  logK(25. C)  h2o    h+     na+    cl-    hco3-  ca+2   so4-2  mg+2   ba+2   al+3   h4sio4 
+ al(oh)2+       2.300   1.0       10.592   2.00  -2.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   1.00   0.00
+ alo2-          1.800  -1.0       22.868   2.00  -4.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   1.00   0.00
+ aloh+2         2.800   2.0        4.951   1.00  -1.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   1.00   0.00
+ also4+         2.300   1.0       -3.155   0.00   0.00   0.00   0.00   0.00   0.00   1.00   0.00   0.00   1.00   0.00
+ ba(co3)        0.000   0.0        7.675   0.00  -1.00   0.00   0.00   1.00   0.00   0.00   0.00   1.00   0.00   0.00
+ ba(hco3)+      2.300   1.0       -1.028   0.00   0.00   0.00   0.00   1.00   0.00   0.00   0.00   1.00   0.00   0.00
+ bacl+          2.300   1.0        0.491   0.00   0.00   0.00   1.00   0.00   0.00   0.00   0.00   1.00   0.00   0.00
+ baco3          0.000   0.0        7.675   0.00  -1.00   0.00   0.00   1.00   0.00   0.00   0.00   1.00   0.00   0.00
+ baoh+          2.300   1.0       13.496   1.00  -1.00   0.00   0.00   0.00   0.00   0.00   0.00   1.00   0.00   0.00
+ ca(hco3)+      2.300   1.0       -1.098   0.00   0.00   0.00   0.00   1.00   1.00   0.00   0.00   0.00   0.00   0.00
+ cacl+          2.300   1.0        0.296   0.00   0.00   0.00   1.00   0.00   1.00   0.00   0.00   0.00   0.00   0.00
+ cacl2          0.000   0.0        0.651   0.00   0.00   0.00   2.00   0.00   1.00   0.00   0.00   0.00   0.00   0.00
+ caco3          0.000   0.0        7.115   0.00  -1.00   0.00   0.00   1.00   1.00   0.00   0.00   0.00   0.00   0.00
+ caoh+          2.300   1.0       12.782   1.00  -1.00   0.00   0.00   0.00   1.00   0.00   0.00   0.00   0.00   0.00
+ caso4          0.000   0.0       -2.299   0.00   0.00   0.00   0.00   0.00   1.00   1.00   0.00   0.00   0.00   0.00
+ co2(aq)        0.000   0.0       -6.349  -1.00   1.00   0.00   0.00   1.00   0.00   0.00   0.00   0.00   0.00   0.00
+ co3-2          2.800  -2.0       10.322   0.00  -1.00   0.00   0.00   1.00   0.00   0.00   0.00   0.00   0.00   0.00
+ h2sio4-2       3.000  -2.0       23.273   0.00  -2.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   1.00
+ halo2          0.000   0.0       16.421   2.00  -3.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   1.00   0.00
+ hcl            0.000   0.0        0.716   0.00   1.00   0.00   1.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00
+ hsio3-         1.800  -1.0        9.814  -1.00  -1.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   1.00
+ hso4-          2.400  -1.0       -1.977   0.00   1.00   0.00   0.00   0.00   0.00   1.00   0.00   0.00   0.00   0.00
+ mg(hco3)+      2.300   1.0       -1.034   0.00   0.00   0.00   0.00   1.00   0.00   0.00   1.00   0.00   0.00   0.00
+ mg4(oh)4+4     4.500   4.0       39.758   4.00  -4.00   0.00   0.00   0.00   0.00   0.00   4.00   0.00   0.00   0.00
+ mgcl+          2.300   1.0       -0.345   0.00   0.00   0.00   1.00   0.00   0.00   0.00   1.00   0.00   0.00   0.00
+ mgco3          0.000   0.0        7.354   0.00  -1.00   0.00   0.00   1.00   0.00   0.00   1.00   0.00   0.00   0.00
+ mgoh+          2.300   1.0       11.681   1.00  -1.00   0.00   0.00   0.00   0.00   0.00   1.00   0.00   0.00   0.00
+ mgso4          0.000   0.0       -2.218   0.00   0.00   0.00   0.00   0.00   0.00   1.00   1.00   0.00   0.00   0.00
+ naco3-         1.800  -1.0        9.062   0.00  -1.00   1.00   0.00   1.00   0.00   0.00   0.00   0.00   0.00   0.00
+ nahco3         0.000   0.0        0.252   0.00   0.00   1.00   0.00   1.00   0.00   0.00   0.00   0.00   0.00   0.00
+ naoh           0.000   0.0       14.755   1.00  -1.00   1.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00
+ naso4-         1.800  -1.0       -0.932   0.00   0.00   1.00   0.00   0.00   0.00   1.00   0.00   0.00   0.00   0.00
+ oh-            1.400  -1.0       13.998   1.00  -1.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00
+
+ Mineral Reactions
+  minerals    m.vol(L/mol)  logK(25. C)  h2o    h+     na+    cl-    hco3-  ca+2   so4-2  mg+2   ba+2   al+3   h4sio4 
+ quartz(alpha      0.0227      -3.740   -2.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   1.00
+ dolomite          0.0644       3.545    0.00  -2.00   0.00   0.00   2.00   1.00   0.00   1.00   0.00   0.00   0.00
+ kaolinite         0.0993       6.474    1.00  -6.00   0.00   0.00   0.00   0.00   0.00   0.00   0.00   2.00   2.00
+ barite            0.0521     -10.040    0.00   0.00   0.00   0.00   0.00   0.00   1.00   0.00   1.00   0.00   0.00
+
+ Gas Reactions
+  gases                     logK( 25.C)  h2o    h+     na+    cl-    hco3-  ca+2   so4-2  mg+2   ba+2   al+3   h4sio4 
+ co2(g)                        -7.857   -1.00   1.00   0.00   0.00   1.00   0.00   0.00   0.00   0.00   0.00   0.00
+
+--------------------------------------------------------------------------------
+INITIAL AND INJECTION WATER TYPES
+ Initial Water Type =   1
+ water temperature (C)=   25.000
+ water pressure (bar) =    1.000
+          icon        guess            ctot         fix   log(Q/K)
+h2o             1     1.0000E+00     1.0000E+00  *                     0.000E+00
+h+              3     1.0000E-07     1.0000E-07  *                     0.000E+00
+na+             1     1.0000E-10     1.0000E-10  *                     0.000E+00
+cl-             1     1.0000E-10     1.0000E-10  *                     0.000E+00
+hco3-           1     1.0000E-10     1.0000E-10  *                     0.000E+00
+ca+2            1     1.0000E-10     1.0000E-10  *                     0.000E+00
+so4-2           1     1.0000E-10     1.0000E-10  *                     0.000E+00
+mg+2            1     1.0000E-10     1.0000E-10  *                     0.000E+00
+al+3            1     1.0000E-10     1.0000E-10  *                     0.000E+00
+ba+2            1     1.0000E-10     1.0000E-10  *                     0.000E+00
+h4sio4          1     1.0000E-10     1.0000E-10  *                     0.000E+00
+
+      Number of initial waters:      1
+      Number of injection waters:   0
+
+
+--------------------------------------------------------------------------------
+INITIAL MINERAL ZONES
+
+ MINERAL ZONE=   1
+mineral         vol.frac.    equil/kinetic
+     quartz(alpha)        7.50000E-01    0
+     dolomite             5.00000E-02    0
+     kaolinite            1.00000E-01    0
+     barite               1.00000E-01    0
+ Sum of mineral volume fractions in zone:  1.00000E+00
+
+     Total number of mineral zones:   1
+
+
+--------------------------------------------------------------------------------
+INITIAL AND INJECTION GAS ZONES
+
+ GAS ZONE=   1
+gas      partial pressure
+     co2(g)               1.00000E-01
+
+     Number of initial gas zones:   1
+
+
+     Number of injection gas zones:   0
+
+
+--------------------------------------------------------------------------------
+INITIAL PERMEABILITY-POROSITY ZONES
+
+     Total number of permeability zones=   0
+
+
+--------------------------------------------------------------------------------
+INITIAL SURFACE ADSORPTION ZONES
+
+     Total number of adsorption zones=   0
+
+
+--------------------------------------------------------------------------------
+INITIAL LINEAR EQUILIBRIUM Kd ZONES
+
+     Total number of Kd zones=   0
+
+
+--------------------------------------------------------------------------------
+INITIAL ZONES OF CATION EXCHANGE
+
+     Total number of exchange zones=   0
+
+
+
+  --> Finished reading chemical.inp file
+
