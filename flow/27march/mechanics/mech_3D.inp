@@ -1,0 +1,157 @@
+
+order
+'x' 'z' 'y'      ;  mesh order x fastest varying,  y next, and z last moslowest varying.  The only order currently supported.
+
+parameters
+9 10 23   !   (nNx nNy nNz;  # of blocks in x, y, and z directions)
+
+1.e-6  5.e-3  ( ftol, stol; rel. toler. for mechan. eqs., toler for porosity change on a step.) Init. stress file;
+smoothedlocalloading
+0.91 0.79 1.
+
+ 0 0    iBC(1,1)  iBC(2,1) ; zero displacement normal to x(1), x(nx) boundaries
+ 0 0    iBC(1,2)  iBC(2,2) ; zero displacement normal to y(1), y(ny) boundaries
+ 0 2    iBC(1,3)  iBC(2,3) ; zero displacement normal to z(1), z(nz)
+-101325. !  stress top vertical (Pa) at z(nz) e.g 250m of bfill *2120 density *-9.81
+
+ 0 0    BCtimevaries(1,1) BCtimevaries(2,1)    no time variation in x boundary stresses
+ 0 0    BCtimevaries(1,2) BCtimevaries(2,2)    no time variation in x boundary stresses
+ 0 0    BCtimevaries(1,3) BCtimevaries(2,3)    no time variation in x boundary stresses
+1.e31  !  BCvol_thresh  threshhold volume. Suppressing geomechanical porosity corrections in cells with MESH file volume greater than this.
+
+materials
+8   number of materials to read properties of (one to one with tough rock types)
+wcase  21.10e+9  21.10+09   10.55e+09     0.0  0.0   0.0e-5         ! mtype, (rocprop(j,mtype),j=1,6)
+  0.447 2.51e+8   2.17e+8   30.0       2302.0  1.0  00.0   1.79E-05 !        (rocprop(j,mtype),j=7,14)
+  0     0.00e-5   0.000e-3                                          !        (rocprop(j,mtype),j=15,17)
+wopen  21.10e+9  21.10e+09  10.55e+09     0.0  0.0   0.0e-5         ! mtype, (rocprop(j,mtype),j=1,6)
+  0.447 0.00e+9   0.00e+9   30.0       1791.0  1.0   2.0   3.0E-05  !        (rocprop(j,mtype),j=7,14)
+  0     3.67e-4   0.887e-0                                          !        (rocprop(j,mtype),j=15,17)
+wadjc  11.0e+09  11.0e+09    4.2968e+09   0.28 0.28  0.0e-5         ! mtype, (rocprop(j,mtype),j=1,6)
+  0.781 2.51e+8   2.17e+8   30.0       2500.0  1.0   2.0   3.0E-05  !        (rocprop(j,mtype),j=7,14)
+  7     3.67e-4   0.887e-0                                          !        (rocprop(j,mtype),j=15,17)   , where 
+bfill   2.5e+10  2.5e+10     4.2968e+09   0.20 0.20  0.0e-5         ! mtype, (rocprop(j,mtype),j=1,6)
+  0.999 3.00e+6   2.00e+6   30.0       2120.0  1.0   2.0   0.0E-05  !        (rocprop(j,mtype),j=7,14)
+  7     0.001    0.887e-0
+silic   3.0e+10  3.0e+10     4.2968e+09   0.32 0.32  0.0e-5         ! mtype, (rocprop(j,mtype),j=1,6)
+  0.999 1.90e+7   1.90e+7   30.0       2500.0  1.0   2.0   0.0E-05  !        (rocprop(j,mtype),j=7,14)
+  7     3.67e-4   0.887e-0
+karst   1.5e+10  1.5e+10     4.2968e+09   0.25 0.25  0.0e-5         ! mtype, (rocprop(j,mtype),j=1,6)
+  0.999 6.70e+6   3.80e+6   30.0       2300.0  1.0   2.0   0.0E-05  !        (rocprop(j,mtype),j=7,14)
+  7     3.67e-4   0.887e-0
+carbb   1.5e+10  1.5e+10    4.2968e+09   0.30 0.30  0.0e-5         ! mtype, (rocprop(j,mtype),j=1,6)
+  0.999 6.70e+6   3.80e+6   30.0       2300.0  1.0   2.0   0.0E-05  !        (rocprop(j,mtype),j=7,14)
+  7     3.67e-4   0.887e-0
+fault   6.0e+09  6.0e+09    4.2968e+09   0.23 0.23  0.0e-5         ! mtype, (rocprop(j,mtype),j=1,6)
+  0.999 0.55e+6   1.00e+6   30.0       2000.0  1.0   2.0   0.0E-05  !        (rocprop(j,mtype),j=7,14)
+  7     3.67e-4   0.887e-0
+!   Format:
+   !         MESH file rocktype name, same as in flow.inp
+   !         Youngs modulus.-parallel anisotropy (Eyp)   = rocprop(1,in)   in Pascal
+   !         Youngs modulus.-normal anisotropy - not used
+   !         shear modulus - gsn (Gzp)         - not used
+   !         Poissons ratio  -(nu_p)                     = rocprop(4,in)   "       
+   !         Poissons ratio  -(nu_zp)          - not used
+   !         orientation of layers (degree)    - not used
+
+   !         Biots coefficient (b) = 1 - Kdr / Kgrain         = rocprop(7,in) 
+   !         cohesion for MC. failure    (in Pascal)          = rocprop(8,in)   
+   !         tensile strength            (in Pascal)          = rocprop(9,in)
+   !         friction angle for M-C (degrees)                 = rocprop(10,in)
+   !         mass bulk density   - not used  (porosity and flow.inp grain density are used).
+   !         coeff. of plastic poro.   - not used) 
+   !         Dilation angle for M-C (degrees)                 = rocprop(13,in)
+   !         Thermal dilation coefficient                     = rocprop(14,in)
+
+   !         Index for permeability porosity relationship;
+   !         ipermporotype (0 none, 1 Carman-Kozeny, 2 Pore Throat, 3 Cubic, 
+   !                        4 Modf cubic, 5 Verma-Pruess, 6 Pape et al. 1999,
+   !                        7 vol_plastic strain/permeability) 
+   !                        8 fracture spacing (m), initial fracture perm/perm )    = rocprop(15,in)  
+   !                        7 or 8 for mechanics failure porosity permeabilities.
+   !                        All except 0 override settings made in chemical.inp file.
+   !
+   !         apermporoparameter       = rocprop(16,in)  parameters for permeability law, 
+   !         bpermporoparameter       = rocprop(17,in)  
+   !           for ipermporotype=7   (cubic-law failure porosity driven)
+   !                  aparpp(i) = fraction of initial porosity that is due to fractures.
+   !                  bparpp(i) = fraction of initial permeability that is due to fractures.
+   !           for ipermporotype=8   (cubic-law failure porosity driven)
+   !                  aparpp(i) = assumed fracture spacing (m)
+   !                  bparpp(i) = fraction of initial permeability that is due to fractures.
+
+   !  above yield stress value is for unfractured granite except for cased well which is for steel .
+
+mopm
+1 5 1 2 1  1 0 1 0.0 0.0  100 1 1 0.25 0.5 
+  ! mopmech(1) mopmech(2) mopmech(3) mopmech(4) mopmech(5)  numMINCMe iverbose ForPoroC chm_rel_p chm_rel_T  maxiter_me ibiot_eff_stress ifailureporo poromix pelastmix
+
+  ! mopmech(1)   Run (1) or Check input-output (0)
+  ! mopmech(2)   Solver flag - not used. BiCG_STAB only solver supported for serial mechanics equations.
+  ! mopmech(3)   1  ; Option for constructing sparse matrix (program only currently supports choice 1).
+  !
+  ! mopmech(4): =0;  output total stress, biot*pressure, temp, total strain
+  !                    only at elements requested by elgm (below).
+  !             =1;  output total stress, biot*pressure, temp, total strain
+  !                    at every element to file RMECH.out every time step.
+  !             =2;  output total stress, (biot*)pressure, temp, total strain
+  !                    at every element at whenever a SAVE file is written, overwriting old file.
+  !             =3;  output total stress, biot*pressure, temp, total strain
+  !                    at every element at every time step, overwriting old file.
+  !             =4;  output total stress, biot*pressure, temp, total strain,
+  !                    at every element at first time step and stop.
+  !             =5;  write initstressratio(1:3) * smoothed local loading stresses
+  !                    to file smoothedlocalloading and stop.
+  !                Note that   stress_effective(4:6) = stress_total(4:6) .
+  !                      and   stress_effective(1:3) = stress_total(1:3) + Biot_coef * pressure ,
+  !                       or   stress_effective(1:3) = stress_total(1:3) +             pressure ,
+  !                Generally,  stress(1:3) < 0 ,  Biot_coef *pressure > 0 ,
+  !                so generally,  | stress_effective(1:3) | <  | stress_total(1:3) | .
+  ! mopmech(5)  =0 skip mechanics 
+  !             =1  run mechanics ( mopmech(5) in flow.inp RMMECH field needs to be 1 also)
+  !
+  ! numMINCMe   not used.
+  ! iverbose    = 0 quiet, 
+  !             > 0 some statistics etc. written to standard output.
+  ! ForPoroC    not used.
+  ! chm_rel_p   not used.
+  ! chm_rel_T   not used.
+  !
+  ! maxiter_me  not used.
+  ! ibiot_eff_stress  =0  use unweighted pressure in effective stress
+  !                       for Mohr-Coulomb criteria (following Dempsey
+  !                       et al., 2014 and Jaeger, et al., 2007).
+  !                   =1  weight pressure by Biot cofficient in
+  !                       effective stress for Mohr-Coulomb Criteria
+  !                       (following Zoback, 2014, undated lecture note)
+  ! ifailureporo     = 0  neglect failure porosity
+  !                  = 1  include failure porosity
+  ! poromix          portion of change in failure porosity to incorporate immediately,
+  !                  e.g., 0.25 . (Performs an average over 1/poromix steps.)   
+  ! pelastmix        portion of change in poro-elastic porosity to incorporate immediately,
+  !                  eg. 0.5 .    (Performs an average over 1/pelastmix steps.)
+
+elgm
+15       ! numprelem_mech ; number of mechanical elements to monitor, followed by element names;
+E__49
+E__58
+E__67
+F__76
+E__94
+E_103
+E_112
+E_121
+E_139
+E_148
+E_157
+E_166
+E_184
+E_193
+E_202
+
+prnd
+
+1          ! # of node points to monitor
+1          ! monnode(m) node # 
+
+done
